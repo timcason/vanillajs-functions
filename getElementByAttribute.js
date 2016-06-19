@@ -1,18 +1,18 @@
-	/* 
-  *	 getElementByAttribute(htmlTag, attr)
-  *  Retrieves the entire element from the DOM that matches both tag name and attribute
-	*/
+ /* 
+  * getElementByAttribute(htmlTag, attr)
+  * Retrieves the entire element from the DOM that matches both tag name and attribute
+ */
 
-	function getElementByAttribute(tagName, attribute){
-		var withProperty = [],
-		tagNameElements = document.getElementsByTagName(tagName);
-		
-		for (i = 1; i < tagNameElements.length; i++) {
-			if (tagNameElements[i].hasAttribute(attribute)) {
-				return tagNameElements[i];
-			}
+function getElementByAttribute(tagName, attribute){
+	var withProperty = [],
+	tagNameElements = document.getElementsByTagName(tagName);
+	
+	for (i = 1; i < tagNameElements.length; i++) {
+		if (tagNameElements[i].hasAttribute(attribute)) {
+			return tagNameElements[i];
 		}
 	}
+}
 
 /* Use Case
 var el = getElementByAttribute('iframe','allowfullscreen');
